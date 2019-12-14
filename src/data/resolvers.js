@@ -45,6 +45,15 @@ export const resolvers = {
           }
         );
       });
+    },
+
+    deleteContact: (root, { id }) => {
+      return new Promise((resolve, object) => {
+        Contacts.remove({ _id: id }, err => {
+          if (err) reject(err);
+          else resolve('Successfully deleted contact!');
+        });
+      });
     }
   }
 };

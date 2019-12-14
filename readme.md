@@ -2,6 +2,24 @@
 
 ## Tryout
 
+### Install
+
+Step 1:
+
+```
+npm install
+```
+
+Step 2:
+
+```
+npm start
+```
+
+### Run application
+
+To try out GraphQL, open [GraphiQL](http://localhost:8080/graphql) in your browser.
+
 Query
 
 ```JavaScript
@@ -98,5 +116,13 @@ mutation {
     email
     company
   }
+}
+```
+
+delete mutation
+
+```JavaScript
+mutation {
+  deleteContact(id:"5df4b61204e3703da8fe3607")
 }
 ```
