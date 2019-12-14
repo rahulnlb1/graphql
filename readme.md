@@ -15,9 +15,9 @@ query {
 }
 ```
 
-Mutation
+Create Mutation
 
-```JSON
+```JavaScript
 mutation {
   createContact( input:{
     firstName: "Rahul",
@@ -33,7 +33,7 @@ mutation {
 
 Get one contact
 
-```JSON
+```JavaScript
 query{
   getOneContact(id:"5df4b8b99c57c169f416f727") {
     firstName
@@ -46,7 +46,7 @@ query{
 
 Alias
 
-```JSON
+```JavaScript
 query{
   one: getOneContact(id:"5df4b8b99c57c169f416f727") {
     firstName
@@ -64,7 +64,7 @@ query{
 
 Fragments
 
-```JSON
+```JavaScript
 query{
   one: getOneContact(id:"5df4b8b99c57c169f416f727") {
     ...contactFragment
@@ -80,5 +80,23 @@ fragment contactFragment on Contact {
   firstName
   lastName
   email
+}
+```
+
+Update Mutation
+
+```JavaScript
+mutation {
+  updateContact(input: {
+    id: "5df4b61204e3703da8fe3607"
+    firstName: "Deepanshi"
+    lastName: "Katoch"
+    company: "SAP"
+  }) {
+    firstName
+    lastName
+    email
+    company
+  }
 }
 ```

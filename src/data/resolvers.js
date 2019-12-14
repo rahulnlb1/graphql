@@ -31,6 +31,20 @@ export const resolvers = {
           else resolve(newContact);
         });
       });
+    },
+
+    updateContact: (root, { input }) => {
+      return new Promise((resolve, object) => {
+        Contacts.findOneAndUpdate(
+          { _id: input.id },
+          input,
+          { new: true },
+          (err, contact) => {
+            if (err) reject(err);
+            else resolve(contact);
+          }
+        );
+      });
     }
   }
 };
