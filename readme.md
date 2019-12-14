@@ -4,7 +4,7 @@
 
 Query
 
-```JSON
+```JavaScript
 query {
   getContacts {
     firstName
