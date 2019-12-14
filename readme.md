@@ -22,7 +22,7 @@ To try out GraphQL, open [GraphiQL](http://localhost:8080/graphql) in your brows
 
 Query
 
-```JavaScript
+```gql
 query {
   getContacts {
     firstName
@@ -35,7 +35,7 @@ query {
 
 Create Mutation
 
-```JavaScript
+```gql
 mutation {
   createContact( input:{
     firstName: "Rahul",
@@ -51,7 +51,7 @@ mutation {
 
 Get one contact
 
-```JavaScript
+```gql
 query{
   getOneContact(id:"5df4b8b99c57c169f416f727") {
     firstName
@@ -64,7 +64,7 @@ query{
 
 Alias
 
-```JavaScript
+```gql
 query{
   one: getOneContact(id:"5df4b8b99c57c169f416f727") {
     firstName
@@ -82,7 +82,7 @@ query{
 
 Fragments
 
-```JavaScript
+```gql
 query{
   one: getOneContact(id:"5df4b8b99c57c169f416f727") {
     ...contactFragment
@@ -103,7 +103,7 @@ fragment contactFragment on Contact {
 
 Update Mutation
 
-```JavaScript
+```gql
 mutation {
   updateContact(input: {
     id: "5df4b61204e3703da8fe3607"
